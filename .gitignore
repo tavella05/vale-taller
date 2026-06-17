@@ -1,6 +1,5 @@
 node_modules/
-dist/*
-!dist/main.js
+dist/**/*.js.map
 .env
 media/
 *.db
