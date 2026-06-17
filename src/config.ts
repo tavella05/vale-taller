@@ -7,6 +7,6 @@ export const config = {
   jwtRefreshSecret: (process.env.JWT_SECRET ?? 'dev-secret-change-in-prod') + '-refresh',
   jwtAccessExpiry: '8h' as const,
   jwtRefreshExpiry: '7d' as const,
-  corsOrigins: (process.env.CORS_ALLOWED_ORIGINS ?? 'http://localhost:5173').split(',').map(s => s.trim()),
+  corsOrigins: (process.env.ALLOWED_ORIGINS ?? 'http://localhost:5173').split(',').map(s => s.trim()),
   nodeEnv: process.env.NODE_ENV ?? 'development',
 };
