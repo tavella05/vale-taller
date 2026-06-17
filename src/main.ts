@@ -6,7 +6,9 @@ import router from './routes';
 
 const app = express();
 
-app.use(cors({ origin: config.corsOrigins, credentials: true }));
+const corsOptions = { origin: config.corsOrigins, credentials: true };
+app.options('*', cors(corsOptions));
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
